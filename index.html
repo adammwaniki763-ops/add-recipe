@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Keeper - Home</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">Recipe Keeper</div>
+      <ul class="nav-menu">
+        <li><a href="home.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="add-recipe.html" class="nav-link">Add Recipe</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <section class="hero">
+      <h1>Your Recipe Collection</h1>
+      <p>Save, organize, and explore your favorite recipes</p>
+    </section>
+
+    <!-- Empty State -->
+    <div id="empty-state" class="empty-state">
+      <div class="empty-state-content">
+        <h2>No recipes yet</h2>
+        <p>Start building your collection by adding your first recipe</p>
+        <a href="add-recipe.html" class="btn btn-primary">Add Your First Recipe</a>
+      </div>
+    </div>
+
+    <!-- Recipe Grid -->
+    <div id="recipe-grid" class="recipe-grid"></div>
+  </main>
+
+  <!-- Recipe Detail Modal -->
+  <div id="recipe-modal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Delete Confirmation Modal -->
+  <div id="delete-modal" class="modal">
+    <div class="modal-content confirmation">
+      <h2>Delete Recipe?</h2>
+      <p>Are you sure you want to delete this recipe? This cannot be undone.</p>
+      <div class="modal-buttons">
+        <button id="cancel-delete" class="btn btn-secondary">Cancel</button>
+        <button id="confirm-delete" class="btn btn-danger">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast"></div>
+
+  <footer class="footer">
+    <p> 2024 Recipe Keeper. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

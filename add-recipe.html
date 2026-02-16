@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Recipe - Recipe Keeper</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">Recipe Keeper</div>
+      <ul class="nav-menu">
+        <li><a href="home.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="add-recipe.html" class="nav-link active">Add Recipe</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <section class="form-section">
+      <h1>Add a New Recipe</h1>
+      <p class="form-subtitle">Share your favorite recipe with your collection</p>
+
+      <form id="recipe-form" class="recipe-form">
+        <div class="form-group">
+          <label for="recipe-name">Recipe Name *</label>
+          <input 
+            type="text" 
+            id="recipe-name" 
+            name="name" 
+            placeholder="e.g., Chocolate Chip Cookies"
+            required
+          >
+          <span class="error-message" id="error-name"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="recipe-category">Category *</label>
+          <select id="recipe-category" name="category" required>
+            <option value="">Select a category</option>
+            <option value="Appetizer">Appetizer</option>
+            <option value="Main Course">Main Course</option>
+            <option value="Dessert">Dessert</option>
+            <option value="Side Dish">Side Dish</option>
+            <option value="Beverage">Beverage</option>
+            <option value="Breakfast">Breakfast</option>
+            <option value="Soup">Soup</option>
+          </select>
+          <span class="error-message" id="error-category"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="recipe-description">Description</label>
+          <textarea 
+            id="recipe-description" 
+            name="description" 
+            placeholder="A brief description of your recipe"
+            rows="2"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="recipe-ingredients">Ingredients *</label>
+          <textarea 
+            id="recipe-ingredients" 
+            name="ingredients" 
+            placeholder="List each ingredient on a new line&#10;e.g.:&#10;2 cups flour&#10;1 cup sugar&#10;3 eggs"
+            rows="6"
+            required
+          ></textarea>
+          <span class="error-message" id="error-ingredients"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="recipe-instructions">Instructions *</label>
+          <textarea 
+            id="recipe-instructions" 
+            name="instructions" 
+            placeholder="Step-by-step cooking instructions&#10;e.g.:&#10;1. Preheat oven to 350°F&#10;2. Mix dry ingredients..."
+            rows="6"
+            required
+          ></textarea>
+          <span class="error-message" id="error-instructions"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="recipe-image">Image URL (optional)</label>
+          <input 
+            type="url" 
+            id="recipe-image" 
+            name="image" 
+            placeholder="https://example.com/image.jpg"
+          >
+          <small>Use a high-quality image URL from Unsplash or similar</small>
+        </div>
+
+        <div class="form-buttons">
+          <button type="submit" class="btn btn-primary">Add Recipe</button>
+          <a href="home.html" class="btn btn-secondary">Cancel</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast"></div>
+
+  <footer class="footer">
+    <p>&copy; 2024 Recipe Keeper. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
